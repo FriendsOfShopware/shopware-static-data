@@ -23,9 +23,6 @@ jobs:
       - name: Generate files
         run: deno run --allow-net --allow-write generate.ts
 
-      - name: Run tests
-        run: deno test -A --unstable
-
       - uses: EndBug/add-and-commit@v4
         with:
           add: '.'
