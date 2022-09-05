@@ -1,0 +1,560 @@
+{
+    "latestPluginVersion": "1.0.16",
+    "advisories": {
+        "PKSA-9m11-ttww-2tp5": {
+            "title": "Improper Access Control in Shopware",
+            "link": "https://github.com/advisories/GHSA-9wrv-g75h-8ccc",
+            "cve": "CVE-2022-24872",
+            "affectedVersions": "<=6.3.4.0",
+            "source": "GitHub",
+            "reportedAt": "2022-04-22 21:04:27"
+        },
+        "PKSA-d3x2-dn2w-41fg": {
+            "title": "Server-Side Request Forgery (SSRF) in Shopware",
+            "link": "https://github.com/advisories/GHSA-7gm7-8q8v-9gf2",
+            "cve": "CVE-2022-24871",
+            "affectedVersions": "<=6.4.9.0",
+            "source": "GitHub",
+            "reportedAt": "2022-04-22 21:04:07"
+        },
+        "PKSA-31ks-9mh2-bz2t": {
+            "title": "HTTP caching is marking private HTTP headers as public in Shopware",
+            "link": "https://github.com/advisories/GHSA-6wrh-279j-6hvw",
+            "cve": "CVE-2022-24747",
+            "affectedVersions": "<=6.4.8.1",
+            "source": "GitHub",
+            "reportedAt": "2022-03-10 17:55:21"
+        },
+        "PKSA-h42k-ssfn-wydy": {
+            "title": "HTML injection possibility in voucher code form in Shopware",
+            "link": "https://github.com/advisories/GHSA-952p-fqcp-g8pc",
+            "cve": "CVE-2022-24746",
+            "affectedVersions": "<=6.4.8.0",
+            "source": "GitHub",
+            "reportedAt": "2022-03-10 17:49:26"
+        },
+        "PKSA-z7kn-2pvx-4xc2": {
+            "title": "Shopware user session is not logged out if the password is reset via password recovery",
+            "link": "https://github.com/advisories/GHSA-w267-m9c4-8555",
+            "cve": "CVE-2022-24744",
+            "affectedVersions": "<=6.4.8.0",
+            "source": "GitHub",
+            "reportedAt": "2022-03-10 17:37:43"
+        },
+        "PKSA-ywt9-nyf5-ngfz": {
+            "title": "Shopware guest session is shared between customers",
+            "link": "https://github.com/advisories/GHSA-jp6h-mxhx-pgqh",
+            "cve": "CVE-2022-24745",
+            "affectedVersions": "<=6.4.8.1",
+            "source": "GitHub",
+            "reportedAt": "2022-03-10 17:28:55"
+        },
+        "PKSA-j2jt-n24d-59bf": {
+            "title": "Webcache Poisoning in shopware/platform and shopware/core",
+            "link": "https://github.com/advisories/GHSA-r64m-qchj-hrjp",
+            "cve": null,
+            "affectedVersions": "<=6.4.6.0",
+            "source": "GitHub",
+            "reportedAt": "2021-11-24 20:05:19"
+        },
+        "PKSA-m33k-hnqm-1z74": {
+            "title": "Exposure of Sensitive Information to an Unauthorized Actor",
+            "link": "https://github.com/advisories/GHSA-6gr8-c3m5-mvrg",
+            "cve": "CVE-2021-32717",
+            "affectedVersions": "<=6.4.1.0",
+            "source": "GitHub",
+            "reportedAt": "2021-09-08 18:00:47"
+        },
+        "PKSA-3n2k-4mv9-c8by": {
+            "title": "Exposure of Sensitive Information to an Unauthorized Actor",
+            "link": "https://github.com/advisories/GHSA-68v9-3jjq-rvp4",
+            "cve": "CVE-2021-32716",
+            "affectedVersions": "<=6.4.1.0",
+            "source": "GitHub",
+            "reportedAt": "2021-09-08 18:00:40"
+        },
+        "PKSA-w4v2-3bkw-2yz8": {
+            "title": "Exposure of Sensitive Information to an Unauthorized Actor",
+            "link": "https://github.com/advisories/GHSA-2p89-5f22-8qvf",
+            "cve": "CVE-2021-32711",
+            "affectedVersions": "<=6.3.5.0",
+            "source": "GitHub",
+            "reportedAt": "2021-09-08 18:00:32"
+        },
+        "PKSA-81ht-jg17-ff2n": {
+            "title": "Session Fixation",
+            "link": "https://github.com/advisories/GHSA-c7vg-w8q8-c3wf",
+            "cve": "CVE-2021-32710",
+            "affectedVersions": "<=6.3.5.1",
+            "source": "GitHub",
+            "reportedAt": "2021-09-08 18:00:20"
+        },
+        "PKSA-fmhx-2rm6-y2wz": {
+            "title": "Insecure direct object reference of log files of the Import/Export feature",
+            "link": "https://github.com/advisories/GHSA-54gp-qff8-946c",
+            "cve": "CVE-2021-37709",
+            "affectedVersions": "<=6.4.3.0",
+            "source": "GitHub",
+            "reportedAt": "2021-08-30 16:14:19"
+        },
+        "PKSA-nq8d-4y8m-jv94": {
+            "title": "Command injection in mail agent settings",
+            "link": "https://github.com/advisories/GHSA-xh55-2fqp-p775",
+            "cve": "CVE-2021-37708",
+            "affectedVersions": "<=6.4.3.0",
+            "source": "GitHub",
+            "reportedAt": "2021-08-30 16:14:09"
+        },
+        "PKSA-5fn8-hpgp-5qwr": {
+            "title": "Manipulation of product reviews via API",
+            "link": "https://github.com/advisories/GHSA-9f8f-574q-8jmf",
+            "cve": "CVE-2021-37707",
+            "affectedVersions": "<=6.4.3.0",
+            "source": "GitHub",
+            "reportedAt": "2021-08-30 16:14:00"
+        },
+        "PKSA-f34f-29sn-4h1c": {
+            "title": "Cross-Site Scripting via SVG media files",
+            "link": "https://github.com/advisories/GHSA-fc38-mxwr-pfhx",
+            "cve": "CVE-2021-37710",
+            "affectedVersions": "<=6.4.3.0",
+            "source": "GitHub",
+            "reportedAt": "2021-08-23 19:43:00"
+        },
+        "PKSA-gvh6-2kkr-cyym": {
+            "title": "Authenticated server-side request forgery in file upload via URL.",
+            "link": "https://github.com/advisories/GHSA-gcvv-gq92-x94r",
+            "cve": "CVE-2021-37711",
+            "affectedVersions": "<=6.4.3.0",
+            "source": "GitHub",
+            "reportedAt": "2021-08-23 19:42:49"
+        },
+        "PKSA-612h-8jpf-mqtm": {
+            "title": "Missing Authentication for Critical Function",
+            "link": "https://github.com/advisories/GHSA-p696-gf58-9w97",
+            "cve": "CVE-2021-32709",
+            "affectedVersions": "<=6.4.1.0",
+            "source": "GitHub",
+            "reportedAt": "2021-06-29 17:23:10"
+        },
+        "PKSA-gg1j-4h83-49ky": {
+            "title": "non-admin users can create integration role with administrator role",
+            "link": "https://github.com/advisories/GHSA-243q-g9j3-qf6r",
+            "cve": null,
+            "affectedVersions": "<=6.4.1.0",
+            "source": "GitHub",
+            "reportedAt": "2021-06-28 18:21:01"
+        },
+        "PKSA-czfs-z2f2-xc8r": {
+            "title": "Internal hidden fields are visible on to many associations in admin api",
+            "link": "https://github.com/advisories/GHSA-gpmh-g94g-qrhr",
+            "cve": null,
+            "affectedVersions": "<=6.4.1.0",
+            "source": "GitHub",
+            "reportedAt": "2021-06-28 18:20:53"
+        },
+        "PKSA-rkw1-228g-dzps": {
+            "title": "Private files publicly accessible with Cloud Storage providers",
+            "link": "https://github.com/advisories/GHSA-vrf2-xghr-j52v",
+            "cve": null,
+            "affectedVersions": "<=6.4.1.0",
+            "source": "GitHub",
+            "reportedAt": "2021-06-28 18:20:42"
+        },
+        "PKSA-bpy7-3v4n-78j8": {
+            "title": "Creation of order credits was not validated by acl in admin orders",
+            "link": "https://github.com/advisories/GHSA-g7w8-pp9w-7p32",
+            "cve": null,
+            "affectedVersions": "<=6.4.1.0",
+            "source": "GitHub",
+            "reportedAt": "2021-06-28 16:57:32"
+        },
+        "PKSA-56nh-s9yt-4pw6": {
+            "title": "Canceling of orders not related to the logged-in user",
+            "link": "https://github.com/advisories/GHSA-wq3r-jwrq-xg6w",
+            "cve": null,
+            "affectedVersions": "<=6.4.1.0",
+            "source": "GitHub",
+            "reportedAt": "2021-06-28 16:57:23"
+        },
+        "PKSA-n286-2spw-39pt": {
+            "title": "After order payment process manipulation in shopware/platform and shopware/core ",
+            "link": "https://github.com/advisories/GHSA-88rc-3p98-rgvx",
+            "cve": null,
+            "affectedVersions": "<=6.3.5.2",
+            "source": "GitHub",
+            "reportedAt": "2021-04-13 15:13:48"
+        },
+        "PKSA-1twh-tt7h-ds25": {
+            "title": "Leak of information via Store-API aggregations in shopware/platform and shopware/core",
+            "link": "https://github.com/advisories/GHSA-qg7c-q3vq-rgxr",
+            "cve": null,
+            "affectedVersions": "<=6.3.5.2",
+            "source": "GitHub",
+            "reportedAt": "2021-04-13 15:13:26"
+        },
+        "PKSA-9bqw-n29f-6z7y": {
+            "title": "Authenticated remote code execution",
+            "link": "https://github.com/advisories/GHSA-pjj4-jjgc-h3r8",
+            "cve": null,
+            "affectedVersions": "<=6.3.5.1",
+            "source": "GitHub",
+            "reportedAt": "2021-03-12 23:09:24"
+        },
+        "PKSA-67qk-k65g-j8tn": {
+            "title": "Potential Session Hijacking",
+            "link": "https://github.com/advisories/GHSA-h9q8-5gv2-v6mg",
+            "cve": null,
+            "affectedVersions": "<=6.3.5.1",
+            "source": "GitHub",
+            "reportedAt": "2021-03-12 23:09:08"
+        },
+        "PKSA-mqfj-hr7y-3j71": {
+            "title": "Leak of information via Store-API",
+            "link": "https://github.com/advisories/GHSA-f2vv-h5x4-57gr",
+            "cve": null,
+            "affectedVersions": "<=6.3.5.0",
+            "source": "GitHub",
+            "reportedAt": "2021-02-10 02:32:21"
+        },
+        "PKSA-wvmm-4n94-w557": {
+            "title": "Generation of fake documents via public GET-call",
+            "link": "https://github.com/advisories/GHSA-jvg4-9rc2-wvcr",
+            "cve": null,
+            "affectedVersions": "<=6.3.5.0",
+            "source": "GitHub",
+            "reportedAt": "2021-02-10 02:32:07"
+        },
+        "PKSA-zhdh-p298-ky5d": {
+            "title": "Authenticated Server Side Request Forgery",
+            "link": "https://github.com/advisories/GHSA-8pfh-mm2g-hmc3",
+            "cve": null,
+            "affectedVersions": "<=6.3.4.0",
+            "source": "GitHub",
+            "reportedAt": "2020-12-21 18:01:24"
+        },
+        "PKSA-h6sr-nh9k-8njy": {
+            "title": "Information exposure via query strings in URL",
+            "link": "https://github.com/advisories/GHSA-cq6h-w3mc-57f4",
+            "cve": null,
+            "affectedVersions": "<=6.3.4.0",
+            "source": "GitHub",
+            "reportedAt": "2020-12-21 18:01:16"
+        },
+        "PKSA-cf6z-m4kc-pv1v": {
+            "title": "Authenticated Privilege Escalation",
+            "link": "https://github.com/advisories/GHSA-5q58-x5h2-v5rx",
+            "cve": null,
+            "affectedVersions": "<=6.3.4.0",
+            "source": "GitHub",
+            "reportedAt": "2020-12-21 18:01:08"
+        },
+        "PKSA-rc67-965d-nzq9": {
+            "title": "Denial of Service via Cache Flooding",
+            "link": "https://github.com/advisories/GHSA-p68v-frgx-4rjp",
+            "cve": null,
+            "affectedVersions": "<=6.3.2.0",
+            "source": "GitHub",
+            "reportedAt": "2020-10-19 21:34:14"
+        },
+        "PKSA-rqw5-rx3t-r44f": {
+            "title": "Authenticated XML External Entity Processing",
+            "link": "https://github.com/advisories/GHSA-8xv9-qcr9-ww9j",
+            "cve": null,
+            "affectedVersions": "<=6.3.2.0",
+            "source": "GitHub",
+            "reportedAt": "2020-10-19 21:32:18"
+        },
+        "PKSA-574z-qb3v-9x66": {
+            "title": "Non-persistent XSS in the Storefront in Shopware",
+            "link": "https://github.com/advisories/GHSA-qvhr-55hg-3qwv",
+            "cve": null,
+            "affectedVersions": "<=6.3.1.0",
+            "source": "GitHub",
+            "reportedAt": "2020-09-23 17:20:39"
+        },
+        "PKSA-97z9-1v6q-3j3f": {
+            "title": "RCE in Third Party Library in Shopware",
+            "link": "https://github.com/advisories/GHSA-qvc5-cfrr-384v",
+            "cve": null,
+            "affectedVersions": "<=6.3.1.0",
+            "source": "GitHub",
+            "reportedAt": "2020-09-23 17:20:28"
+        }
+    },
+    "versionToAdvisories": {
+        "6.4.9.0": [
+            "PKSA-d3x2-dn2w-41fg"
+        ],
+        "6.4.8.2": [
+            "PKSA-d3x2-dn2w-41fg"
+        ],
+        "6.4.8.1": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-ywt9-nyf5-ngfz"
+        ],
+        "6.4.8.0": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-h42k-ssfn-wydy",
+            "PKSA-z7kn-2pvx-4xc2",
+            "PKSA-ywt9-nyf5-ngfz"
+        ],
+        "6.4.7.0": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-h42k-ssfn-wydy",
+            "PKSA-z7kn-2pvx-4xc2",
+            "PKSA-ywt9-nyf5-ngfz"
+        ],
+        "6.4.6.1": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-h42k-ssfn-wydy",
+            "PKSA-z7kn-2pvx-4xc2",
+            "PKSA-ywt9-nyf5-ngfz"
+        ],
+        "6.4.6.0": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-h42k-ssfn-wydy",
+            "PKSA-z7kn-2pvx-4xc2",
+            "PKSA-ywt9-nyf5-ngfz",
+            "PKSA-j2jt-n24d-59bf"
+        ],
+        "6.4.5.1": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-h42k-ssfn-wydy",
+            "PKSA-z7kn-2pvx-4xc2",
+            "PKSA-ywt9-nyf5-ngfz",
+            "PKSA-j2jt-n24d-59bf"
+        ],
+        "6.4.5.0": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-h42k-ssfn-wydy",
+            "PKSA-z7kn-2pvx-4xc2",
+            "PKSA-ywt9-nyf5-ngfz",
+            "PKSA-j2jt-n24d-59bf"
+        ],
+        "6.4.4.1": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-h42k-ssfn-wydy",
+            "PKSA-z7kn-2pvx-4xc2",
+            "PKSA-ywt9-nyf5-ngfz",
+            "PKSA-j2jt-n24d-59bf"
+        ],
+        "6.4.4.0": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-h42k-ssfn-wydy",
+            "PKSA-z7kn-2pvx-4xc2",
+            "PKSA-ywt9-nyf5-ngfz",
+            "PKSA-j2jt-n24d-59bf"
+        ],
+        "6.4.3.1": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-h42k-ssfn-wydy",
+            "PKSA-z7kn-2pvx-4xc2",
+            "PKSA-ywt9-nyf5-ngfz",
+            "PKSA-j2jt-n24d-59bf"
+        ],
+        "6.4.3.0": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-h42k-ssfn-wydy",
+            "PKSA-z7kn-2pvx-4xc2",
+            "PKSA-ywt9-nyf5-ngfz",
+            "PKSA-j2jt-n24d-59bf",
+            "PKSA-fmhx-2rm6-y2wz",
+            "PKSA-nq8d-4y8m-jv94",
+            "PKSA-5fn8-hpgp-5qwr",
+            "PKSA-f34f-29sn-4h1c",
+            "PKSA-gvh6-2kkr-cyym"
+        ],
+        "6.4.2.1": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-h42k-ssfn-wydy",
+            "PKSA-z7kn-2pvx-4xc2",
+            "PKSA-ywt9-nyf5-ngfz",
+            "PKSA-j2jt-n24d-59bf",
+            "PKSA-fmhx-2rm6-y2wz",
+            "PKSA-nq8d-4y8m-jv94",
+            "PKSA-5fn8-hpgp-5qwr",
+            "PKSA-f34f-29sn-4h1c",
+            "PKSA-gvh6-2kkr-cyym"
+        ],
+        "6.4.2.0": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-h42k-ssfn-wydy",
+            "PKSA-z7kn-2pvx-4xc2",
+            "PKSA-ywt9-nyf5-ngfz",
+            "PKSA-j2jt-n24d-59bf",
+            "PKSA-fmhx-2rm6-y2wz",
+            "PKSA-nq8d-4y8m-jv94",
+            "PKSA-5fn8-hpgp-5qwr",
+            "PKSA-f34f-29sn-4h1c",
+            "PKSA-gvh6-2kkr-cyym"
+        ],
+        "6.4.1.2": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-h42k-ssfn-wydy",
+            "PKSA-z7kn-2pvx-4xc2",
+            "PKSA-ywt9-nyf5-ngfz",
+            "PKSA-j2jt-n24d-59bf",
+            "PKSA-fmhx-2rm6-y2wz",
+            "PKSA-nq8d-4y8m-jv94",
+            "PKSA-5fn8-hpgp-5qwr",
+            "PKSA-f34f-29sn-4h1c",
+            "PKSA-gvh6-2kkr-cyym"
+        ],
+        "6.4.1.1": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-h42k-ssfn-wydy",
+            "PKSA-z7kn-2pvx-4xc2",
+            "PKSA-ywt9-nyf5-ngfz",
+            "PKSA-j2jt-n24d-59bf",
+            "PKSA-fmhx-2rm6-y2wz",
+            "PKSA-nq8d-4y8m-jv94",
+            "PKSA-5fn8-hpgp-5qwr",
+            "PKSA-f34f-29sn-4h1c",
+            "PKSA-gvh6-2kkr-cyym"
+        ],
+        "6.4.1.0": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-h42k-ssfn-wydy",
+            "PKSA-z7kn-2pvx-4xc2",
+            "PKSA-ywt9-nyf5-ngfz",
+            "PKSA-j2jt-n24d-59bf",
+            "PKSA-m33k-hnqm-1z74",
+            "PKSA-3n2k-4mv9-c8by",
+            "PKSA-fmhx-2rm6-y2wz",
+            "PKSA-nq8d-4y8m-jv94",
+            "PKSA-5fn8-hpgp-5qwr",
+            "PKSA-f34f-29sn-4h1c",
+            "PKSA-gvh6-2kkr-cyym",
+            "PKSA-612h-8jpf-mqtm",
+            "PKSA-gg1j-4h83-49ky",
+            "PKSA-czfs-z2f2-xc8r",
+            "PKSA-rkw1-228g-dzps",
+            "PKSA-bpy7-3v4n-78j8",
+            "PKSA-56nh-s9yt-4pw6"
+        ],
+        "6.4.0.0": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-h42k-ssfn-wydy",
+            "PKSA-z7kn-2pvx-4xc2",
+            "PKSA-ywt9-nyf5-ngfz",
+            "PKSA-j2jt-n24d-59bf",
+            "PKSA-m33k-hnqm-1z74",
+            "PKSA-3n2k-4mv9-c8by",
+            "PKSA-fmhx-2rm6-y2wz",
+            "PKSA-nq8d-4y8m-jv94",
+            "PKSA-5fn8-hpgp-5qwr",
+            "PKSA-f34f-29sn-4h1c",
+            "PKSA-gvh6-2kkr-cyym",
+            "PKSA-612h-8jpf-mqtm",
+            "PKSA-gg1j-4h83-49ky",
+            "PKSA-czfs-z2f2-xc8r",
+            "PKSA-rkw1-228g-dzps",
+            "PKSA-bpy7-3v4n-78j8",
+            "PKSA-56nh-s9yt-4pw6"
+        ],
+        "6.4.0.0-RC1": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-h42k-ssfn-wydy",
+            "PKSA-z7kn-2pvx-4xc2",
+            "PKSA-ywt9-nyf5-ngfz",
+            "PKSA-j2jt-n24d-59bf",
+            "PKSA-m33k-hnqm-1z74",
+            "PKSA-3n2k-4mv9-c8by",
+            "PKSA-fmhx-2rm6-y2wz",
+            "PKSA-nq8d-4y8m-jv94",
+            "PKSA-5fn8-hpgp-5qwr",
+            "PKSA-f34f-29sn-4h1c",
+            "PKSA-gvh6-2kkr-cyym",
+            "PKSA-612h-8jpf-mqtm",
+            "PKSA-gg1j-4h83-49ky",
+            "PKSA-czfs-z2f2-xc8r",
+            "PKSA-rkw1-228g-dzps",
+            "PKSA-bpy7-3v4n-78j8",
+            "PKSA-56nh-s9yt-4pw6"
+        ],
+        "6.3.5.4": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-h42k-ssfn-wydy",
+            "PKSA-z7kn-2pvx-4xc2",
+            "PKSA-ywt9-nyf5-ngfz",
+            "PKSA-j2jt-n24d-59bf",
+            "PKSA-m33k-hnqm-1z74",
+            "PKSA-3n2k-4mv9-c8by",
+            "PKSA-fmhx-2rm6-y2wz",
+            "PKSA-nq8d-4y8m-jv94",
+            "PKSA-5fn8-hpgp-5qwr",
+            "PKSA-f34f-29sn-4h1c",
+            "PKSA-gvh6-2kkr-cyym",
+            "PKSA-612h-8jpf-mqtm",
+            "PKSA-gg1j-4h83-49ky",
+            "PKSA-czfs-z2f2-xc8r",
+            "PKSA-rkw1-228g-dzps",
+            "PKSA-bpy7-3v4n-78j8",
+            "PKSA-56nh-s9yt-4pw6"
+        ],
+        "6.3.5.3": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-h42k-ssfn-wydy",
+            "PKSA-z7kn-2pvx-4xc2",
+            "PKSA-ywt9-nyf5-ngfz",
+            "PKSA-j2jt-n24d-59bf",
+            "PKSA-m33k-hnqm-1z74",
+            "PKSA-3n2k-4mv9-c8by",
+            "PKSA-fmhx-2rm6-y2wz",
+            "PKSA-nq8d-4y8m-jv94",
+            "PKSA-5fn8-hpgp-5qwr",
+            "PKSA-f34f-29sn-4h1c",
+            "PKSA-gvh6-2kkr-cyym",
+            "PKSA-612h-8jpf-mqtm",
+            "PKSA-gg1j-4h83-49ky",
+            "PKSA-czfs-z2f2-xc8r",
+            "PKSA-rkw1-228g-dzps",
+            "PKSA-bpy7-3v4n-78j8",
+            "PKSA-56nh-s9yt-4pw6"
+        ],
+        "6.3.5.2": [
+            "PKSA-d3x2-dn2w-41fg",
+            "PKSA-31ks-9mh2-bz2t",
+            "PKSA-h42k-ssfn-wydy",
+            "PKSA-z7kn-2pvx-4xc2",
+            "PKSA-ywt9-nyf5-ngfz",
+            "PKSA-j2jt-n24d-59bf",
+            "PKSA-m33k-hnqm-1z74",
+            "PKSA-3n2k-4mv9-c8by",
+            "PKSA-fmhx-2rm6-y2wz",
+            "PKSA-nq8d-4y8m-jv94",
+            "PKSA-5fn8-hpgp-5qwr",
+            "PKSA-f34f-29sn-4h1c",
+            "PKSA-gvh6-2kkr-cyym",
+            "PKSA-612h-8jpf-mqtm",
+            "PKSA-gg1j-4h83-49ky",
+            "PKSA-czfs-z2f2-xc8r",
+            "PKSA-rkw1-228g-dzps",
+            "PKSA-bpy7-3v4n-78j8",
+            "PKSA-56nh-s9yt-4pw6",
+            "PKSA-n286-2spw-39pt",
+            "PKSA-1twh-tt7h-ds25"
+        ]
+    }
+}
