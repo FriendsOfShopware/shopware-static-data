@@ -21,7 +21,7 @@ jobs:
           deno-version: v1.x
 
       - name: Generate files
-        run: deno run --allow-net --allow-write generate.t
+        run: deno run --allow-net --allow-write generate.ts
 
       - name: Run tests
         run: deno test -A --unstable
