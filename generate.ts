@@ -11,7 +11,7 @@ async function generateSecurity() {
     const packagistResp = await fetch('https://packagist.org/api/security-advisories/?packages[]=shopware/platform');
     const packagist = await packagistResp.json();
 
-    const allVersionsResp = await fetch('https://api.github.com/repos/shopware/platform/tags');
+    const allVersionsResp = await fetch('https://api.github.com/repos/shopware/platform/tags?per_page=100');
     const allVersions = await allVersionsResp.json();
 
     const data: Security = {
