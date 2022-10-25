@@ -1,5 +1,5 @@
 {
-    "latestPluginVersion": "1.0.18",
+    "latestPluginVersion": "1.0.19",
     "advisories": {
         "PKSA-9m11-ttww-2tp5": {
             "title": "Improper Access Control in Shopware",
