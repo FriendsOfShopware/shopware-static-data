@@ -1,5 +1,5 @@
 {
-    "latestPluginVersion": "1.0.20",
+    "latestPluginVersion": "1.0.21",
     "advisories": {
         "PKSA-vpqc-w91w-1ctj": {
             "title": "Shopware has Improper Input Validation issue in newsletter subscription",
