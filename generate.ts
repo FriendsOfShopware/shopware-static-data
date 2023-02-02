@@ -53,8 +53,6 @@ async function generateSecurity(allVersions: any) {
 async function generatePHPVersionMap(allVersions: any) {
     const data: Record<string, string> = {};
 
-    data['6.5.0.0'] = '8.1';
-
     for (let version of allVersions.reverse()) {
         const versionName = version.name.replace(/^v/, '');
 
@@ -66,6 +64,8 @@ async function generatePHPVersionMap(allVersions: any) {
             data[versionName] = "7.2";
         }
     }
+    
+    data['6.5.0.0'] = '8.1';
 
     await Deno.writeTextFile("data/php-version.json", JSON.stringify(data, null, 4));
 }
