@@ -23,7 +23,7 @@ jobs:
       - name: Generate files
         run: deno run --allow-net --allow-write generate.ts
 
-      - uses: EndBug/add-and-commit@v4
+      - uses: EndBug/add-and-commit@v9
         with:
           add: '.'
           author_name: Frosh Automation
