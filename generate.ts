@@ -19,6 +19,7 @@ async function generate() {
     const allVersions = await allVersionsResp.json();
 
     await generateSecurity(allVersions);
+    await generatePHPVersionMap(allVersions);
     await generateAllSupportedPhpVersions(allVersions);
 }
 
@@ -63,6 +64,27 @@ async function generateSecurity(allVersions: any) {
 
     await Deno.writeTextFile("data/security.json", JSON.stringify(data, null, 4));
 }
+
+async function generatePHPVersionMap(allVersions: any) {
+    const data: Record<string, string> = {};
+
+    for (let version of allVersions.reverse()) {
+        const versionName = version.name.replace(/^v/, '');
+
+        if (versionName.startsWith('6.5')) {
+            data[versionName] = "8.1";
+        } else if (versionName.startsWith('6.4')) {
+            data[versionName] = "7.4";
+        } else {
+            data[versionName] = "7.2";
+        }
+    }
+    
+    data['6.5.0.0'] = '8.1';
+
+    await Deno.writeTextFile("data/php-version.json", JSON.stringify(data, null, 4));
+}
+
 
 async function generateAllSupportedPhpVersions(allVersions: any) {
     // TODO: typing for the API endpoint
