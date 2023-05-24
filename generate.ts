@@ -20,7 +20,7 @@ async function generate() {
 
     await generateSecurity(allVersions);
     await generatePHPVersionMap(allVersions);
-    await generateAllSupportedPhpVersions(allVersions);
+    await generateAllSupportedPhpVersions();
 }
 
 async function generateSecurity(allVersions: any) {
@@ -86,13 +86,11 @@ async function generatePHPVersionMap(allVersions: any) {
 }
 
 
-async function generateAllSupportedPhpVersions(allVersions: any) {
+async function generateAllSupportedPhpVersions() {
     // TODO: typing for the API endpoint
     const packagistDataResp = await fetch("https://repo.packagist.org/p2/shopware/platform.json");
     const packagistData = await packagistDataResp.json();
-    
     const packageVersions = packagistData.packages["shopware/platform"];
-
     const data: Record<string, Array<string>> = {};
 
     for (let index in packageVersions) {
