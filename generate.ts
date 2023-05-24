@@ -19,7 +19,7 @@ async function generate() {
     const allVersions = await allVersionsResp.json();
 
     await generateSecurity(allVersions);
-    await generatePHPVersionMap(allVersions);
+    await generateAllSupportedPhpVersions(allVersions);
 }
 
 async function generateSecurity(allVersions: any) {
@@ -64,7 +64,7 @@ async function generateSecurity(allVersions: any) {
     await Deno.writeTextFile("data/security.json", JSON.stringify(data, null, 4));
 }
 
-async function generatePHPVersionMap(allVersions: any) {
+async function generateAllSupportedPhpVersions(allVersions: any) {
     // TODO: typing for the API endpoint
     const packagistDataResp = await fetch("https://repo.packagist.org/p2/shopware/platform.json");
     const packagistData = await packagistDataResp.json();
@@ -93,7 +93,7 @@ async function generatePHPVersionMap(allVersions: any) {
         });
     }
 
-    await Deno.writeTextFile("data/php-version.json", JSON.stringify(data, null, 4));
+    await Deno.writeTextFile("data/all-supported-php-versions-by-shopware-version.json", JSON.stringify(data, null, 4));
 }
 
 generate().then();
