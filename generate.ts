@@ -1,11 +1,26 @@
 import { satisfies } from "https://github.com/omichelsen/compare-versions/raw/main/src/index.ts";
 
+/**
+ * @todo: is there an API / simple way to dynamically load PHP minor versions? 
+ */
+const PHP_VERSIONS = [
+    "7.0",
+    "7.1",
+    "7.2",
+    "7.3",
+    "7.4",
+    "8.0",
+    "8.1",
+    "8.2",
+];
+
 async function generate() {
     const allVersionsResp = await fetch('https://api.github.com/repos/shopware/platform/tags?per_page=100');
     const allVersions = await allVersionsResp.json();
 
     await generateSecurity(allVersions);
     await generatePHPVersionMap(allVersions);
+    await generateAllSupportedPhpVersions();
 }
 
 async function generateSecurity(allVersions: any) {
@@ -68,6 +83,37 @@ async function generatePHPVersionMap(allVersions: any) {
     data['6.5.0.0'] = '8.1';
 
     await Deno.writeTextFile("data/php-version.json", JSON.stringify(data, null, 4));
+}
+
+
+async function generateAllSupportedPhpVersions() {
+    // TODO: typing for the API endpoint
+    const packagistDataResp = await fetch("https://repo.packagist.org/p2/shopware/platform.json");
+    const packagistData = await packagistDataResp.json();
+    const packageVersions = packagistData.packages["shopware/platform"];
+    const data: Record<string, Array<string>> = {};
+
+    for (let index in packageVersions) {
+        const packageVersion = packageVersions[index];
+        const semverVersion = packageVersion?.version;
+        const phpDependency = packageVersion?.require?.php;
+
+        if (!semverVersion || !phpDependency) {
+            continue;
+        }
+
+        PHP_VERSIONS.forEach((phpVersion) => {
+            if (satisfies(phpVersion, phpDependency)) {
+                if (!data[semverVersion]) {
+                    data[semverVersion] = [];
+                }
+
+                data[semverVersion].push(phpVersion);
+            }
+        });
+    }
+
+    await Deno.writeTextFile("data/all-supported-php-versions-by-shopware-version.json", JSON.stringify(data, null, 4));
 }
 
 generate().then();
