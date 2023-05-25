@@ -1,5 +1,9 @@
 import { satisfies } from "https://github.com/omichelsen/compare-versions/raw/main/src/index.ts";
 
+interface ComposerPackageInfo {
+    [key: string]: any;
+}
+
 /**
  * @todo: is there an API / simple way to dynamically load PHP minor versions? 
  */
@@ -79,10 +83,36 @@ async function generatePHPVersionMap(allVersions: any) {
             data[versionName] = "7.2";
         }
     }
-    
+
     data['6.5.0.0'] = '8.1';
 
     await Deno.writeTextFile("data/php-version.json", JSON.stringify(data, null, 4));
+}
+
+function expandPackagistVersions(versions: ComposerPackageInfo[]): ComposerPackageInfo[] {
+    const expanded: ComposerPackageInfo[] = [];
+
+    for (const versionData of versions) {
+        const expandedVersion: ComposerPackageInfo = {};
+
+        if (expanded.length > 0) {
+            // Copy the previous expanded version to the current one
+            Object.assign(expandedVersion, expanded[expanded.length - 1]);
+        }
+
+        for (const key in versionData) {
+            const val = versionData[key];
+            if (val === '__unset') {
+                delete expandedVersion[key];
+            } else {
+                expandedVersion[key] = val;
+            }
+        }
+
+        expanded.push(expandedVersion);
+    }
+
+    return expanded;
 }
 
 
@@ -90,7 +120,7 @@ async function generateAllSupportedPhpVersions() {
     // TODO: typing for the API endpoint
     const packagistDataResp = await fetch("https://repo.packagist.org/p2/shopware/platform.json");
     const packagistData = await packagistDataResp.json();
-    const packageVersions = packagistData.packages["shopware/platform"];
+    const packageVersions = expandPackagistVersions(packagistData.packages["shopware/platform"]);
     const data: Record<string, Array<string>> = {};
 
     for (let index in packageVersions) {
