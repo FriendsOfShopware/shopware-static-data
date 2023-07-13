@@ -1,4 +1,4 @@
-import { satisfies } from "https://github.com/omichelsen/compare-versions/raw/main/src/index.ts";
+import { satisfies } from "https://raw.githubusercontent.com/omichelsen/compare-versions/v5.0.3/src/index.ts";
 
 interface ComposerPackageInfo {
     [key: string]: any;
