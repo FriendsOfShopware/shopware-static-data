@@ -15,13 +15,12 @@ jobs:
       - name: Setup repo
         uses: actions/checkout@v3
 
-      - name: Setup Deno
-        uses: denoland/setup-deno@v1
+      - uses: buildjet/setup-go@v4
         with:
-          deno-version: v1.x
+          go-version: '1.21'
 
       - name: Generate files
-        run: deno run --allow-net --allow-write generate.ts
+        run: go run .
 
       - uses: EndBug/add-and-commit@v9
         with:
