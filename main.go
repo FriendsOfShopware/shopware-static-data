@@ -33,7 +33,7 @@ func getRepositoryTags(ctx context.Context, client *github.Client) ([]*github.Re
 		PerPage: 100,
 	}
 	for {
-		paginated, resp, err := client.Repositories.ListTags(ctx, "shopware", "platform", opts)
+		paginated, resp, err := client.Repositories.ListTags(ctx, "shopware", "shopware", opts)
 		if err != nil {
 			return nil, err
 		}
