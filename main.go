@@ -15,12 +15,12 @@ func main() {
 		panic(err)
 	}
 
-	//if err := generateSecurityAdvisories(ctx, tags); err != nil {
-	//	panic(err)
-	//}
-	//if err := generatePHPMinMap(ctx, tags); err != nil {
-	//	panic(err)
-	//}
+	if err := generateSecurityAdvisories(ctx, tags); err != nil {
+		panic(err)
+	}
+	if err := generatePHPMinMap(ctx, tags); err != nil {
+		panic(err)
+	}
 	if err := generateAllSupportedPHPVersions(ctx, tags); err != nil {
 		panic(err)
 	}
