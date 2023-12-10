@@ -80,11 +80,7 @@ func isSupported(shopwareVersion *version.Version, packageVersionConstraint vers
 		}
 	}
 
-	if packageVersionConstraint.Check(phpV) {
-		return true
-	}
-
-	return false
+	return packageVersionConstraint.Check(phpV)
 }
 
 func expandPackagistResponse(packageVersions []map[string]interface{}) []map[string]interface{} {
