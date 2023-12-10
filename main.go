@@ -21,7 +21,7 @@ func main() {
 	if err := generatePHPMinMap(ctx, tags); err != nil {
 		panic(err)
 	}
-	if err := generateAllSupportedPHPVersions(ctx, tags); err != nil {
+	if err := generateAllSupportedPHPVersions(ctx); err != nil {
 		panic(err)
 	}
 }

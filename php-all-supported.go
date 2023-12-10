@@ -5,15 +5,12 @@ import (
 	"encoding/json"
 	"github.com/FriendsOfShopware/shopware-cli/version"
 	"github.com/barkimedes/go-deepcopy"
-	"github.com/google/go-github/v53/github"
 	"io"
 	"net/http"
 	"os"
 )
 
 var phpVersions = []string{
-	"7.0",
-	"7.1",
 	"7.2",
 	"7.3",
 	"7.4",
@@ -21,9 +18,17 @@ var phpVersions = []string{
 	"8.1",
 	"8.2",
 	"8.3",
+	"8.4",
 }
 
-func generateAllSupportedPHPVersions(ctx context.Context, tags []*github.RepositoryTag) error {
+// until shopware 6.5, the constraint was not specific enough, so we need to handle them specific
+var shopwareMaxPhpVersion = map[string]string{
+	"6.0.0.0":  "7.4",
+	"<6.4.6.0": "8.0",
+	"<6.5.0.0": "8.2",
+}
+
+func generateAllSupportedPHPVersions(ctx context.Context) error {
 	packagistResponse, err := fetchPackageInformation(ctx)
 
 	if err != nil {
@@ -36,17 +41,18 @@ func generateAllSupportedPHPVersions(ctx context.Context, tags []*github.Reposit
 
 	for _, packageVersion := range packageVersions {
 		phpVersion := packageVersion["require"].(map[string]interface{})["php"].(string)
-		shopwareVersion := packageVersion["version_normalized"].(string)
+		shopwareVersionNorm := packageVersion["version_normalized"].(string)
+		shopwareVersion := version.Must(version.NewVersion(shopwareVersionNorm))
 
-		phpVersionMap[shopwareVersion] = make([]string, 0)
+		phpVersionMap[shopwareVersionNorm] = make([]string, 0)
 
 		packageVersionConstraint := version.MustConstraints(version.NewConstraint(phpVersion))
 
 		for _, phpVersion := range phpVersions {
 			phpV := version.Must(version.NewVersion(phpVersion))
 
-			if packageVersionConstraint.Check(phpV) {
-				phpVersionMap[shopwareVersion] = append(phpVersionMap[shopwareVersion], phpVersion)
+			if isSupported(shopwareVersion, packageVersionConstraint, phpV) {
+				phpVersionMap[shopwareVersionNorm] = append(phpVersionMap[shopwareVersionNorm], phpVersion)
 			}
 		}
 	}
@@ -64,17 +70,30 @@ func generateAllSupportedPHPVersions(ctx context.Context, tags []*github.Reposit
 	return nil
 }
 
-func expandPackagistResponse(versions []map[string]interface{}) []map[string]interface{} {
+func isSupported(shopwareVersion *version.Version, packageVersionConstraint version.Constraints, phpV *version.Version) bool {
+	for shopwareConstraint, phpMaxVersion := range shopwareMaxPhpVersion {
+		phpMaxV := version.Must(version.NewVersion(phpMaxVersion))
+		shopwareVersionCompareConstraint := version.MustConstraints(version.NewConstraint(shopwareConstraint))
+
+		if shopwareVersionCompareConstraint.Check(shopwareVersion) && phpV.GreaterThan(phpMaxV) {
+			return false
+		}
+	}
+
+	return packageVersionConstraint.Check(phpV)
+}
+
+func expandPackagistResponse(packageVersions []map[string]interface{}) []map[string]interface{} {
 	expanded := make([]map[string]interface{}, 0)
 
-	for index, version := range versions {
+	for index, versions := range packageVersions {
 		expandedVersion := make(map[string]interface{})
 
 		if len(expanded) > 0 {
 			expandedVersion = deepcopy.MustAnything(expanded[index-1]).(map[string]interface{})
 		}
 
-		for key, value := range version {
+		for key, value := range versions {
 			assertedString, _ := value.(string)
 
 			if assertedString == "__unset" {
