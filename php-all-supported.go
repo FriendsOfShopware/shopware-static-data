@@ -37,7 +37,7 @@ func generateAllSupportedPHPVersions(ctx context.Context) error {
 
 	phpVersionMap := make(map[string][]string)
 
-	packageVersions := expandPackagistResponse(packagistResponse.Packages["shopware/platform"])
+	packageVersions := expandPackagistResponse(packagistResponse.Packages["shopware/core"])
 
 	for _, packageVersion := range packageVersions {
 		phpVersion := packageVersion["require"].(map[string]interface{})["php"].(string)
@@ -114,7 +114,7 @@ type packagistPackageResponse struct {
 }
 
 func fetchPackageInformation(ctx context.Context) (*packagistPackageResponse, error) {
-	r, err := http.NewRequestWithContext(ctx, http.MethodGet, "https://repo.packagist.org/p2/shopware/platform.json", nil)
+	r, err := http.NewRequestWithContext(ctx, http.MethodGet, "https://repo.packagist.org/p2/shopware/core.json", nil)
 
 	if err != nil {
 		return nil, err
