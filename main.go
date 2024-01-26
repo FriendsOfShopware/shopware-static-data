@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+
 	"github.com/google/go-github/v53/github"
 )
 
@@ -16,9 +17,6 @@ func main() {
 	}
 
 	if err := generateSecurityAdvisories(ctx, tags); err != nil {
-		panic(err)
-	}
-	if err := generatePHPMinMap(ctx, tags); err != nil {
 		panic(err)
 	}
 	if err := generateAllSupportedPHPVersions(ctx); err != nil {

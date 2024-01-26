@@ -3,11 +3,12 @@ package main
 import (
 	"context"
 	"encoding/json"
-	"github.com/FriendsOfShopware/shopware-cli/version"
-	"github.com/barkimedes/go-deepcopy"
 	"io"
 	"net/http"
 	"os"
+
+	"github.com/FriendsOfShopware/shopware-cli/version"
+	"github.com/barkimedes/go-deepcopy"
 )
 
 var phpVersions = []string{
@@ -36,6 +37,7 @@ func generateAllSupportedPHPVersions(ctx context.Context) error {
 	}
 
 	phpVersionMap := make(map[string][]string)
+	phpMinVersionMap := make(map[string]string)
 
 	packageVersions := expandPackagistResponse(packagistResponse.Packages["shopware/core"])
 
@@ -48,11 +50,19 @@ func generateAllSupportedPHPVersions(ctx context.Context) error {
 
 		packageVersionConstraint := version.MustConstraints(version.NewConstraint(phpVersion))
 
+		index := 0
+
 		for _, phpVersion := range phpVersions {
 			phpV := version.Must(version.NewVersion(phpVersion))
 
 			if isSupported(shopwareVersion, packageVersionConstraint, phpV) {
+				if index == 0 {
+					phpMinVersionMap[shopwareVersionNorm] = phpVersion
+				}
+
 				phpVersionMap[shopwareVersionNorm] = append(phpVersionMap[shopwareVersionNorm], phpVersion)
+
+				index++
 			}
 		}
 	}
@@ -64,6 +74,16 @@ func generateAllSupportedPHPVersions(ctx context.Context) error {
 	}
 
 	if err = os.WriteFile("data/all-supported-php-versions-by-shopware-version.json", data, os.ModePerm); err != nil {
+		return err
+	}
+
+	data, err = json.MarshalIndent(phpMinVersionMap, "", "  ")
+
+	if err != nil {
+		return err
+	}
+
+	if err = os.WriteFile("data/php-version.json", data, os.ModePerm); err != nil {
 		return err
 	}
 
