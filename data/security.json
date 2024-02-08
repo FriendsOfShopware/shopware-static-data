@@ -363,10 +363,6 @@
     }
   },
   "versionToAdvisories": {
-    "6.5.3.1": [
-      "PKSA-9n6r-fddd-r9bb",
-      "PKSA-sz3r-ymxp-htg6"
-    ],
     "v6.0.0+dp1": [
       "PKSA-9n6r-fddd-r9bb",
       "PKSA-sz3r-ymxp-htg6",
