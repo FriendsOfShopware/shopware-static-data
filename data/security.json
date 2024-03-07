@@ -209,6 +209,14 @@
       "source": "GitHub",
       "reportedAt": "2020-12-21 18:01:16"
     },
+    "PKSA-hh61-vznp-4z86": {
+      "title": "Shopware's session is persistent in Cache for 404 pages",
+      "link": "https://github.com/advisories/GHSA-c2f9-4jmm-v45m",
+      "cve": "CVE-2024-27917",
+      "affectedVersions": "\u003e=6.5.8.0,\u003c6.5.8.7",
+      "source": "GitHub",
+      "reportedAt": "2024-03-06 15:06:54"
+    },
     "PKSA-j2jt-n24d-59bf": {
       "title": "Webcache Poisoning in shopware/platform and shopware/core",
       "link": "https://github.com/advisories/GHSA-r64m-qchj-hrjp",
@@ -2574,6 +2582,27 @@
     "v6.5.7.3": [
       "PKSA-9n6r-fddd-r9bb",
       "PKSA-sz3r-ymxp-htg6"
+    ],
+    "v6.5.8.0": [
+      "PKSA-hh61-vznp-4z86"
+    ],
+    "v6.5.8.1": [
+      "PKSA-hh61-vznp-4z86"
+    ],
+    "v6.5.8.2": [
+      "PKSA-hh61-vznp-4z86"
+    ],
+    "v6.5.8.3": [
+      "PKSA-hh61-vznp-4z86"
+    ],
+    "v6.5.8.4": [
+      "PKSA-hh61-vznp-4z86"
+    ],
+    "v6.5.8.5": [
+      "PKSA-hh61-vznp-4z86"
+    ],
+    "v6.5.8.6": [
+      "PKSA-hh61-vznp-4z86"
     ]
   }
 }
