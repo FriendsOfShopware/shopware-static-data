@@ -109,7 +109,7 @@
       "title": "Shopware database password is leaked to an unauthenticated users",
       "link": "https://github.com/advisories/GHSA-r4ph-mx67-x58p",
       "cve": "CVE-2020-13997",
-      "affectedVersions": "\u003c6.2.3",
+      "affectedVersions": "\u003e=6.0.0,\u003c6.2.3",
       "source": "GitHub",
       "reportedAt": "2022-05-24 17:24:28"
     },
