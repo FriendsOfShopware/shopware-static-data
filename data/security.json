@@ -1,5 +1,5 @@
 {
-  "latestPluginVersion": "1.0.29",
+  "latestPluginVersion": "1.0.30",
   "advisories": {
     "PKSA-1twh-tt7h-ds25": {
       "title": "Leak of information via Store-API aggregations in shopware/platform and shopware/core",
