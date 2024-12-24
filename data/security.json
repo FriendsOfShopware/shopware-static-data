@@ -419,6 +419,15 @@
     }
   },
   "versionToAdvisories": {
+    "6.5.3.1": [
+      "PKSA-4jyx-mm79-zmg7",
+      "PKSA-69f8-ft32-qt99",
+      "PKSA-44zj-btqf-vtmh",
+      "PKSA-c7v1-2zh3-y11f",
+      "PKSA-z88n-916m-msqr",
+      "PKSA-9n6r-fddd-r9bb",
+      "PKSA-sz3r-ymxp-htg6"
+    ],
     "v6.0.0+dp1": [
       "PKSA-4jyx-mm79-zmg7",
       "PKSA-69f8-ft32-qt99",
