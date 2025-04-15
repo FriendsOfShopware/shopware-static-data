@@ -1,7 +1,8 @@
 module github.com/friendsofshopware/shopware-static-data
 
-go 1.21
-toolchain go1.24.1
+go 1.23.0
+
+toolchain go1.24.2
 
 require (
 	github.com/FriendsOfShopware/shopware-cli v0.0.0-20240412170421-4b98ad69bbc6
