@@ -45,7 +45,7 @@
       "title": "Shopware 6 allows attackers to check for registered accounts through the store-api",
       "link": "https://github.com/advisories/GHSA-hh7j-6x3q-f52h",
       "cve": "CVE-2025-30150",
-      "affectedVersions": "\u003c6.5.8.17|\u003e=6.7.0.0-rc1,\u003c6.7.0.0-rc2|\u003e=6.6.0.0,\u003c6.6.10.3",
+      "affectedVersions": "=6.7.0.0-rc1|\u003c=6.6.10.2",
       "source": "GitHub",
       "reportedAt": "2025-04-08 14:50:13"
     },
@@ -237,7 +237,7 @@
       "title": "Shopware Vulnerable to Blind SQL-injection in DAL aggregations",
       "link": "https://github.com/advisories/GHSA-8g35-7rmw-7f59",
       "cve": "CVE-2025-27892",
-      "affectedVersions": "\u003c6.5.8.17|\u003e=6.7.0.0-rc1,\u003c6.7.0.0-rc2|\u003e=6.6.0.0,\u003c6.6.10.3",
+      "affectedVersions": "\u003c=6.6.10.2|=6.7.0.0-rc1",
       "source": "GitHub",
       "reportedAt": "2025-04-08 16:33:06"
     },
@@ -3782,6 +3782,10 @@
       "PKSA-qf2k-hv7v-9bz9",
       "PKSA-4xth-xj4w-m8t1"
     ],
+    "v6.5.8.17": [
+      "PKSA-fkd6-58gd-wqfz",
+      "PKSA-4xth-xj4w-m8t1"
+    ],
     "v6.5.8.2": [
       "PKSA-7zw7-y79b-kv9s",
       "PKSA-9qy7-f7jp-k813",
@@ -3895,30 +3899,44 @@
     ],
     "v6.6.0.0-rc1": [
       "PKSA-7zw7-y79b-kv9s",
+      "PKSA-fkd6-58gd-wqfz",
+      "PKSA-4xth-xj4w-m8t1",
       "PKSA-z88n-916m-msqr"
     ],
     "v6.6.0.0-rc2": [
       "PKSA-7zw7-y79b-kv9s",
+      "PKSA-fkd6-58gd-wqfz",
+      "PKSA-4xth-xj4w-m8t1",
       "PKSA-z88n-916m-msqr"
     ],
     "v6.6.0.0-rc3": [
       "PKSA-7zw7-y79b-kv9s",
+      "PKSA-fkd6-58gd-wqfz",
+      "PKSA-4xth-xj4w-m8t1",
       "PKSA-z88n-916m-msqr"
     ],
     "v6.6.0.0-rc4": [
       "PKSA-7zw7-y79b-kv9s",
+      "PKSA-fkd6-58gd-wqfz",
+      "PKSA-4xth-xj4w-m8t1",
       "PKSA-z88n-916m-msqr"
     ],
     "v6.6.0.0-rc5": [
       "PKSA-7zw7-y79b-kv9s",
+      "PKSA-fkd6-58gd-wqfz",
+      "PKSA-4xth-xj4w-m8t1",
       "PKSA-z88n-916m-msqr"
     ],
     "v6.6.0.0-rc6": [
       "PKSA-7zw7-y79b-kv9s",
+      "PKSA-fkd6-58gd-wqfz",
+      "PKSA-4xth-xj4w-m8t1",
       "PKSA-z88n-916m-msqr"
     ],
     "v6.6.0.0-rc7": [
       "PKSA-7zw7-y79b-kv9s",
+      "PKSA-fkd6-58gd-wqfz",
+      "PKSA-4xth-xj4w-m8t1",
       "PKSA-z88n-916m-msqr"
     ],
     "v6.6.0.1": [
