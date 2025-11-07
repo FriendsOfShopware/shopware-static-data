@@ -507,26 +507,6 @@
     }
   },
   "versionToAdvisories": {
-    "6.5.3.1": [
-      "PKSA-g23j-x3sb-wcbc",
-      "PKSA-cb17-wqsx-y85w",
-      "PKSA-ph5g-5w5h-nqtz",
-      "PKSA-wg2b-w14d-z55p",
-      "PKSA-h7xc-cnc9-hq4s",
-      "PKSA-sy2r-ddrd-9s1c",
-      "PKSA-7zw7-y79b-kv9s",
-      "PKSA-9qy7-f7jp-k813",
-      "PKSA-fkd6-58gd-wqfz",
-      "PKSA-qf2k-hv7v-9bz9",
-      "PKSA-4xth-xj4w-m8t1",
-      "PKSA-4jyx-mm79-zmg7",
-      "PKSA-69f8-ft32-qt99",
-      "PKSA-44zj-btqf-vtmh",
-      "PKSA-c7v1-2zh3-y11f",
-      "PKSA-z88n-916m-msqr",
-      "PKSA-9n6r-fddd-r9bb",
-      "PKSA-sz3r-ymxp-htg6"
-    ],
     "v6.0.0+dp1": [
       "PKSA-g23j-x3sb-wcbc",
       "PKSA-cb17-wqsx-y85w",
