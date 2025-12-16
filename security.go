@@ -1,46 +1,50 @@
 package main
 
 import (
-	"context"
-	"encoding/json"
-	"fmt"
-	"github.com/FriendsOfShopware/shopware-cli/version"
-	"github.com/google/go-github/v53/github"
-	"io"
-	"net/http"
-	"os"
-	"strings"
+    "context"
+    "encoding/json"
+    "fmt"
+    "io"
+    "net/http"
+    "os"
+    "strings"
+
+    "github.com/FriendsOfShopware/shopware-cli/version"
+    "github.com/google/go-github/v53/github"
 )
+
+type advisoryItem struct {
+	AdvisoryId         string `json:"advisoryId"`
+	PackageName        string `json:"packageName"`
+	RemoteId           string `json:"remoteId"`
+	Title              string `json:"title"`
+	Link               string `json:"link"`
+	Cve                string `json:"cve"`
+	AffectedVersions   string `json:"affectedVersions"`
+	Source             string `json:"source"`
+	ReportedAt         string `json:"reportedAt"`
+	ComposerRepository string `json:"composerRepository"`
+	Sources            []struct {
+		Name     string `json:"name"`
+		RemoteId string `json:"remoteId"`
+	} `json:"sources"`
+}
 
 type packagistSecurityResponse struct {
 	Advisories struct {
-		ShopwarePlatform []struct {
-			AdvisoryId         string `json:"advisoryId"`
-			PackageName        string `json:"packageName"`
-			RemoteId           string `json:"remoteId"`
-			Title              string `json:"title"`
-			Link               string `json:"link"`
-			Cve                string `json:"cve"`
-			AffectedVersions   string `json:"affectedVersions"`
-			Source             string `json:"source"`
-			ReportedAt         string `json:"reportedAt"`
-			ComposerRepository string `json:"composerRepository"`
-			Sources            []struct {
-				Name     string `json:"name"`
-				RemoteId string `json:"remoteId"`
-			} `json:"sources"`
-		} `json:"shopware/platform"`
+		ShopwarePlatform []advisoryItem `json:"shopware/platform"`
+		ShopwareShopware []advisoryItem `json:"shopware/shopware"`
 	} `json:"advisories"`
 }
 
 func generateSecurityAdvisories(ctx context.Context, tags []*github.RepositoryTag) error {
-	packagistAdvisories, err := getAllSecurityAdvisories(ctx)
+    packagistAdvisories, err := getAllSecurityAdvisories(ctx)
 
 	if err != nil {
 		return err
 	}
 
-	latestVersion, err := getSecurityPluginLatestVersion(ctx, "6.4.14.0")
+ latestVersion, err := getSecurityPluginLatestVersion(ctx, "6.4.14.0")
 
 	if err != nil {
 		return err
@@ -66,7 +70,9 @@ func generateSecurityAdvisories(ctx context.Context, tags []*github.RepositoryTa
 		fileStruct.LatestPluginVersionV2[v] = pluginVer
 	}
 
-	for _, advisory := range packagistAdvisories.Advisories.ShopwarePlatform {
+	allAdvisories := append(packagistAdvisories.Advisories.ShopwarePlatform, packagistAdvisories.Advisories.ShopwareShopware...)
+
+	for _, advisory := range allAdvisories {
 		fileStruct.Advisories[advisory.AdvisoryId] = advisories{
 			Title:      advisory.Title,
 			Link:       advisory.Link,
@@ -80,16 +86,8 @@ func generateSecurityAdvisories(ctx context.Context, tags []*github.RepositoryTa
 	for _, tag := range tags {
 		v := version.Must(version.NewVersion(tag.GetName()))
 
-		for _, advisory := range packagistAdvisories.Advisories.ShopwarePlatform {
-			constraint := version.MustConstraints(version.NewConstraint(advisory.AffectedVersions))
-
-			if constraint.Check(v) {
-				if fileStruct.VersionToAdvisories[tag.GetName()] == nil {
-					fileStruct.VersionToAdvisories[tag.GetName()] = []string{}
-				}
-
-				fileStruct.VersionToAdvisories[tag.GetName()] = append(fileStruct.VersionToAdvisories[tag.GetName()], advisory.AdvisoryId)
-			}
+		for _, advisory := range allAdvisories {
+			processAdvisoryForVersion(advisory.AdvisoryId, advisory.AffectedVersions, v, tag.GetName(), &fileStruct)
 		}
 	}
 
@@ -106,8 +104,20 @@ func generateSecurityAdvisories(ctx context.Context, tags []*github.RepositoryTa
 	return nil
 }
 
+func processAdvisoryForVersion(advisoryId, affectedVersions string, v *version.Version, tagName string, fileStruct *securityFile) {
+	constraint := version.MustConstraints(version.NewConstraint(affectedVersions))
+
+	if constraint.Check(v) {
+		if fileStruct.VersionToAdvisories[tagName] == nil {
+			fileStruct.VersionToAdvisories[tagName] = []string{}
+		}
+
+		fileStruct.VersionToAdvisories[tagName] = append(fileStruct.VersionToAdvisories[tagName], advisoryId)
+	}
+}
+
 func getAllSecurityAdvisories(ctx context.Context) (*packagistSecurityResponse, error) {
-	r, err := http.NewRequestWithContext(ctx, http.MethodGet, "https://packagist.org/api/security-advisories/?packages[]=shopware/platform", nil)
+	r, err := http.NewRequestWithContext(ctx, http.MethodGet, "https://packagist.org/api/security-advisories/?packages[]=shopware/platform&packages[]=shopware/shopware", nil)
 
 	if err != nil {
 		return nil, err
@@ -141,15 +151,15 @@ func getAllSecurityAdvisories(ctx context.Context) (*packagistSecurityResponse, 
 }
 
 type shopwareApiResponse []struct {
-	Version string `json:"version"`
+    Version string `json:"version"`
 }
 
 func getSecurityPluginLatestVersion(ctx context.Context, shopwareVersion string) (string, error) {
-	r, err := http.NewRequestWithContext(ctx, http.MethodGet, fmt.Sprintf("https://api.shopware.com/pluginStore/pluginsByName?locale=en-GB&shopwareVersion=%s&technicalNames%%5B0%%5D=SwagPlatformSecurity", shopwareVersion), nil)
+    r, err := http.NewRequestWithContext(ctx, http.MethodGet, fmt.Sprintf("https://api.shopware.com/pluginStore/pluginsByName?locale=en-GB&shopwareVersion=%s&technicalNames%%5B0%%5D=SwagPlatformSecurity", shopwareVersion), nil)
 
-	if err != nil {
-		return "", err
-	}
+    if err != nil {
+        return "", err
+    }
 
 	r.Header.Set("User-Agent", "Shopware Security Checker")
 
