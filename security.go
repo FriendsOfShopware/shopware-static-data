@@ -9,6 +9,7 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"strings"
 )
 
 type packagistSecurityResponse struct {
@@ -39,16 +40,30 @@ func generateSecurityAdvisories(ctx context.Context, tags []*github.RepositoryTa
 		return err
 	}
 
-	latestVersion, err := getSecurityPluginLatestVersion(ctx)
+	latestVersion, err := getSecurityPluginLatestVersion(ctx, "6.4.14.0")
 
 	if err != nil {
 		return err
 	}
 
 	fileStruct := securityFile{
-		LatestPluginVersion: latestVersion,
-		Advisories:          make(map[string]advisories),
-		VersionToAdvisories: make(map[string][]string),
+		LatestPluginVersion:   latestVersion,
+		LatestPluginVersionV2: make(map[string]string),
+		Advisories:            make(map[string]advisories),
+		VersionToAdvisories:   make(map[string][]string),
+	}
+
+	for _, v := range []string{"6.7", "6.6", "6.5", "6.4"} {
+		latest, err := findLatestVersion(tags, v)
+		if err != nil {
+			return err
+		}
+
+		pluginVer, err := getSecurityPluginLatestVersion(ctx, latest)
+		if err != nil {
+			return err
+		}
+		fileStruct.LatestPluginVersionV2[v] = pluginVer
 	}
 
 	for _, advisory := range packagistAdvisories.Advisories.ShopwarePlatform {
@@ -129,8 +144,8 @@ type shopwareApiResponse []struct {
 	Version string `json:"version"`
 }
 
-func getSecurityPluginLatestVersion(ctx context.Context) (string, error) {
-	r, err := http.NewRequestWithContext(ctx, http.MethodGet, "https://api.shopware.com/pluginStore/pluginsByName?locale=en-GB&shopwareVersion=6.4.14.0&technicalNames%5B0%5D=SwagPlatformSecurity", nil)
+func getSecurityPluginLatestVersion(ctx context.Context, shopwareVersion string) (string, error) {
+	r, err := http.NewRequestWithContext(ctx, http.MethodGet, fmt.Sprintf("https://api.shopware.com/pluginStore/pluginsByName?locale=en-GB&shopwareVersion=%s&technicalNames%%5B0%%5D=SwagPlatformSecurity", shopwareVersion), nil)
 
 	if err != nil {
 		return "", err
@@ -165,4 +180,32 @@ func getSecurityPluginLatestVersion(ctx context.Context) (string, error) {
 	}
 
 	return apiResponse[0].Version, nil
+}
+
+func findLatestVersion(tags []*github.RepositoryTag, prefix string) (string, error) {
+	var latestVer *version.Version
+	var latestTagName string
+
+	for _, tag := range tags {
+		name := tag.GetName()
+		if !strings.HasPrefix(name, "v"+prefix) {
+			continue
+		}
+
+		v, err := version.NewVersion(name)
+		if err != nil {
+			continue
+		}
+
+		if latestVer == nil || v.GreaterThan(latestVer) {
+			latestVer = v
+			latestTagName = name
+		}
+	}
+
+	if latestVer == nil {
+		return "", fmt.Errorf("cannot find latest version for prefix %s", prefix)
+	}
+
+	return strings.TrimPrefix(latestTagName, "v"), nil
 }
