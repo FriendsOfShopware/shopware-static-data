@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 
-	"github.com/google/go-github/v53/github"
+	"github.com/google/go-github/v80/github"
 )
 
 func main() {

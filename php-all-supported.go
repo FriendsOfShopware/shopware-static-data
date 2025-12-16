@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/FriendsOfShopware/shopware-cli/version"
+	"github.com/shyim/go-version"
 	"github.com/barkimedes/go-deepcopy"
 )
 

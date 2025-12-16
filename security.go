@@ -9,8 +9,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/FriendsOfShopware/shopware-cli/version"
-	"github.com/google/go-github/v53/github"
+	"github.com/shyim/go-version"
+	"github.com/google/go-github/v80/github"
 )
 
 type advisoryItem struct {
