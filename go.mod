@@ -10,4 +10,7 @@ require (
 	github.com/shyim/go-version v0.0.0-20250828113848-97ec77491b32
 )
 
-require github.com/google/go-querystring v1.1.0 // indirect
+require (
+	github.com/google/go-querystring v1.1.0 // indirect
+	golang.org/x/oauth2 v0.34.0 // indirect
+)

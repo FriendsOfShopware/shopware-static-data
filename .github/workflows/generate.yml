@@ -21,6 +21,8 @@ jobs:
 
       - name: Generate files
         run: go run .
+        env:
+          GITHUB_API_KEY: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: EndBug/add-and-commit@v9
         with:

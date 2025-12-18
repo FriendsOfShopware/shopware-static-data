@@ -2,13 +2,25 @@ package main
 
 import (
 	"context"
+	"os"
 
 	"github.com/google/go-github/v80/github"
+	"golang.org/x/oauth2"
 )
 
 func main() {
 	ctx := context.Background()
-	client := github.NewClient(nil)
+	var client *github.Client
+
+	if token := os.Getenv("GITHUB_API_KEY"); token != "" {
+		ts := oauth2.StaticTokenSource(
+			&oauth2.Token{AccessToken: token},
+		)
+		tc := oauth2.NewClient(ctx, ts)
+		client = github.NewClient(tc)
+	} else {
+		client = github.NewClient(nil)
+	}
 
 	tags, err := getRepositoryTags(ctx, client)
 
