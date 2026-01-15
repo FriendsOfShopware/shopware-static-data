@@ -4,7 +4,7 @@
     "6.4": "1.0.39",
     "6.5": "2.0.15",
     "6.6": "3.0.11",
-    "6.7": "4.0.5"
+    "6.7": "4.0.6"
   },
   "advisories": {
     "PKSA-1twh-tt7h-ds25": {
@@ -222,6 +222,14 @@
       "affectedVersions": "\u003c6.2.3",
       "source": "GitHub",
       "reportedAt": "2022-05-24 17:24:28"
+    },
+    "PKSA-bc17-t4m6-cf6m": {
+      "title": "Shopware Has Improper Control of Generation of Code in Twig rendered views",
+      "link": "https://github.com/advisories/GHSA-7cw6-7h3h-v8pf",
+      "cve": "CVE-2026-23498",
+      "affectedVersions": "\u003e=6.7.0.0,\u003c6.7.6.1",
+      "source": "GitHub",
+      "reportedAt": "2026-01-14 16:54:27"
     },
     "PKSA-bpy7-3v4n-78j8": {
       "title": "Creation of order credits was not validated by acl in admin orders",
@@ -688,7 +696,7 @@
       "reportedAt": "2021-09-08 17:59:46"
     },
     "PKSA-y73d-9xyp-2rvj": {
-      "title": "Improper Control of Generation of Code in Twig rendered views",
+      "title": "Shopware Has Improper Control of Generation of Code in Twig rendered views",
       "link": "https://github.com/advisories/GHSA-7v2v-9rm4-7m8f",
       "cve": "CVE-2023-2017",
       "affectedVersions": "\u003c=6.4.20.0",
@@ -5569,6 +5577,7 @@
       "PKSA-ph5g-5w5h-nqtz",
       "PKSA-wg2b-w14d-z55p",
       "PKSA-h7xc-cnc9-hq4s",
+      "PKSA-bc17-t4m6-cf6m",
       "PKSA-fpkr-chs9-vmj6",
       "PKSA-886t-tnv7-bg6r"
     ],
@@ -5583,6 +5592,7 @@
       "PKSA-fkd6-58gd-wqfz",
       "PKSA-qf2k-hv7v-9bz9",
       "PKSA-4xth-xj4w-m8t1",
+      "PKSA-bc17-t4m6-cf6m",
       "PKSA-fpkr-chs9-vmj6",
       "PKSA-886t-tnv7-bg6r"
     ],
@@ -5592,6 +5602,7 @@
       "PKSA-ph5g-5w5h-nqtz",
       "PKSA-wg2b-w14d-z55p",
       "PKSA-h7xc-cnc9-hq4s",
+      "PKSA-bc17-t4m6-cf6m",
       "PKSA-fpkr-chs9-vmj6",
       "PKSA-886t-tnv7-bg6r"
     ],
@@ -5601,6 +5612,7 @@
       "PKSA-ph5g-5w5h-nqtz",
       "PKSA-wg2b-w14d-z55p",
       "PKSA-h7xc-cnc9-hq4s",
+      "PKSA-bc17-t4m6-cf6m",
       "PKSA-fpkr-chs9-vmj6",
       "PKSA-886t-tnv7-bg6r"
     ],
@@ -5610,6 +5622,7 @@
       "PKSA-ph5g-5w5h-nqtz",
       "PKSA-wg2b-w14d-z55p",
       "PKSA-h7xc-cnc9-hq4s",
+      "PKSA-bc17-t4m6-cf6m",
       "PKSA-fpkr-chs9-vmj6",
       "PKSA-886t-tnv7-bg6r"
     ],
@@ -5619,6 +5632,7 @@
       "PKSA-ph5g-5w5h-nqtz",
       "PKSA-wg2b-w14d-z55p",
       "PKSA-h7xc-cnc9-hq4s",
+      "PKSA-bc17-t4m6-cf6m",
       "PKSA-fpkr-chs9-vmj6",
       "PKSA-886t-tnv7-bg6r"
     ],
@@ -5628,6 +5642,7 @@
       "PKSA-ph5g-5w5h-nqtz",
       "PKSA-wg2b-w14d-z55p",
       "PKSA-h7xc-cnc9-hq4s",
+      "PKSA-bc17-t4m6-cf6m",
       "PKSA-fpkr-chs9-vmj6",
       "PKSA-886t-tnv7-bg6r"
     ],
@@ -5637,6 +5652,7 @@
       "PKSA-ph5g-5w5h-nqtz",
       "PKSA-wg2b-w14d-z55p",
       "PKSA-h7xc-cnc9-hq4s",
+      "PKSA-bc17-t4m6-cf6m",
       "PKSA-fpkr-chs9-vmj6",
       "PKSA-886t-tnv7-bg6r"
     ],
@@ -5646,6 +5662,7 @@
       "PKSA-ph5g-5w5h-nqtz",
       "PKSA-wg2b-w14d-z55p",
       "PKSA-h7xc-cnc9-hq4s",
+      "PKSA-bc17-t4m6-cf6m",
       "PKSA-fpkr-chs9-vmj6",
       "PKSA-886t-tnv7-bg6r"
     ],
@@ -5655,6 +5672,7 @@
       "PKSA-ph5g-5w5h-nqtz",
       "PKSA-wg2b-w14d-z55p",
       "PKSA-h7xc-cnc9-hq4s",
+      "PKSA-bc17-t4m6-cf6m",
       "PKSA-fpkr-chs9-vmj6",
       "PKSA-886t-tnv7-bg6r"
     ],
@@ -5664,6 +5682,7 @@
       "PKSA-ph5g-5w5h-nqtz",
       "PKSA-wg2b-w14d-z55p",
       "PKSA-h7xc-cnc9-hq4s",
+      "PKSA-bc17-t4m6-cf6m",
       "PKSA-fpkr-chs9-vmj6",
       "PKSA-886t-tnv7-bg6r"
     ],
@@ -5673,6 +5692,7 @@
       "PKSA-ph5g-5w5h-nqtz",
       "PKSA-wg2b-w14d-z55p",
       "PKSA-h7xc-cnc9-hq4s",
+      "PKSA-bc17-t4m6-cf6m",
       "PKSA-fpkr-chs9-vmj6"
     ],
     "v6.7.2.2": [
@@ -5681,6 +5701,7 @@
       "PKSA-ph5g-5w5h-nqtz",
       "PKSA-wg2b-w14d-z55p",
       "PKSA-h7xc-cnc9-hq4s",
+      "PKSA-bc17-t4m6-cf6m",
       "PKSA-fpkr-chs9-vmj6"
     ],
     "v6.7.3.0": [
@@ -5689,22 +5710,34 @@
       "PKSA-ph5g-5w5h-nqtz",
       "PKSA-wg2b-w14d-z55p",
       "PKSA-h7xc-cnc9-hq4s",
+      "PKSA-bc17-t4m6-cf6m",
       "PKSA-fpkr-chs9-vmj6"
     ],
     "v6.7.3.1": [
+      "PKSA-bc17-t4m6-cf6m",
       "PKSA-fpkr-chs9-vmj6"
     ],
     "v6.7.4.0": [
+      "PKSA-bc17-t4m6-cf6m",
       "PKSA-fpkr-chs9-vmj6"
     ],
     "v6.7.4.1": [
+      "PKSA-bc17-t4m6-cf6m",
       "PKSA-fpkr-chs9-vmj6"
     ],
     "v6.7.4.2": [
+      "PKSA-bc17-t4m6-cf6m",
       "PKSA-fpkr-chs9-vmj6"
     ],
     "v6.7.5.0": [
+      "PKSA-bc17-t4m6-cf6m",
       "PKSA-fpkr-chs9-vmj6"
+    ],
+    "v6.7.5.1": [
+      "PKSA-bc17-t4m6-cf6m"
+    ],
+    "v6.7.6.0": [
+      "PKSA-bc17-t4m6-cf6m"
     ]
   }
 }
