@@ -20,6 +20,8 @@ var phpVersions = []string{
 	"8.2",
 	"8.3",
 	"8.4",
+	"8.5",
+	"8.6"
 }
 
 // until shopware 6.5, the constraint was not specific enough, so we need to handle them specific
