@@ -127,6 +127,14 @@
       "source": "GitHub",
       "reportedAt": "2021-06-29 17:23:10"
     },
+    "PKSA-62rz-jzfj-ym5j": {
+      "title": "Exposure of .env if project root is configured as web root in shopware/production",
+      "link": "https://github.com/advisories/GHSA-3pcr-4982-548m",
+      "cve": "",
+      "affectedVersions": "\u003c=6.3.5.2",
+      "source": "GitHub",
+      "reportedAt": "2021-04-13 15:13:37"
+    },
     "PKSA-67qk-k65g-j8tn": {
       "title": "Potential Session Hijacking",
       "link": "https://github.com/advisories/GHSA-h9q8-5gv2-v6mg",
@@ -935,7 +943,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.0.0+ea1": [
       "PKSA-xngt-2zh8-qhq6",
@@ -1007,7 +1016,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.0.0+ea1.1": [
       "PKSA-xngt-2zh8-qhq6",
@@ -1079,7 +1089,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.0.0+ea2": [
       "PKSA-xngt-2zh8-qhq6",
@@ -1151,7 +1162,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.1.0": [
       "PKSA-xngt-2zh8-qhq6",
@@ -1223,7 +1235,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.1.0-rc1": [
       "PKSA-xngt-2zh8-qhq6",
@@ -1295,7 +1308,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.1.0-rc2": [
       "PKSA-xngt-2zh8-qhq6",
@@ -1367,7 +1381,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.1.0-rc3": [
       "PKSA-xngt-2zh8-qhq6",
@@ -1439,7 +1454,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.1.0-rc4": [
       "PKSA-xngt-2zh8-qhq6",
@@ -1511,7 +1527,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.1.1": [
       "PKSA-xngt-2zh8-qhq6",
@@ -1583,7 +1600,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.1.2": [
       "PKSA-xngt-2zh8-qhq6",
@@ -1655,7 +1673,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.1.3": [
       "PKSA-xngt-2zh8-qhq6",
@@ -1727,7 +1746,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.1.4": [
       "PKSA-xngt-2zh8-qhq6",
@@ -1799,7 +1819,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.1.5": [
       "PKSA-xngt-2zh8-qhq6",
@@ -1871,7 +1892,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.1.6": [
       "PKSA-xngt-2zh8-qhq6",
@@ -1943,7 +1965,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.2.0": [
       "PKSA-xngt-2zh8-qhq6",
@@ -2015,7 +2038,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.2.0-RC1": [
       "PKSA-xngt-2zh8-qhq6",
@@ -2087,7 +2111,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.2.1": [
       "PKSA-xngt-2zh8-qhq6",
@@ -2159,7 +2184,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.2.2": [
       "PKSA-xngt-2zh8-qhq6",
@@ -2231,7 +2257,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.2.3": [
       "PKSA-xngt-2zh8-qhq6",
@@ -2300,7 +2327,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.3.0.0": [
       "PKSA-xngt-2zh8-qhq6",
@@ -2369,7 +2397,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.3.0.1": [
       "PKSA-xngt-2zh8-qhq6",
@@ -2438,7 +2467,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.3.0.2": [
       "PKSA-xngt-2zh8-qhq6",
@@ -2507,7 +2537,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.3.1.0": [
       "PKSA-xngt-2zh8-qhq6",
@@ -2576,7 +2607,8 @@
       "PKSA-rc67-965d-nzq9",
       "PKSA-rqw5-rx3t-r44f",
       "PKSA-574z-qb3v-9x66",
-      "PKSA-97z9-1v6q-3j3f"
+      "PKSA-97z9-1v6q-3j3f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.3.1.1": [
       "PKSA-xngt-2zh8-qhq6",
@@ -2643,7 +2675,8 @@
       "PKSA-h6sr-nh9k-8njy",
       "PKSA-cf6z-m4kc-pv1v",
       "PKSA-rc67-965d-nzq9",
-      "PKSA-rqw5-rx3t-r44f"
+      "PKSA-rqw5-rx3t-r44f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.3.2.0": [
       "PKSA-xngt-2zh8-qhq6",
@@ -2710,7 +2743,8 @@
       "PKSA-h6sr-nh9k-8njy",
       "PKSA-cf6z-m4kc-pv1v",
       "PKSA-rc67-965d-nzq9",
-      "PKSA-rqw5-rx3t-r44f"
+      "PKSA-rqw5-rx3t-r44f",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.3.2.1": [
       "PKSA-xngt-2zh8-qhq6",
@@ -2775,7 +2809,8 @@
       "PKSA-wvmm-4n94-w557",
       "PKSA-zhdh-p298-ky5d",
       "PKSA-h6sr-nh9k-8njy",
-      "PKSA-cf6z-m4kc-pv1v"
+      "PKSA-cf6z-m4kc-pv1v",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.3.3.0": [
       "PKSA-xngt-2zh8-qhq6",
@@ -2840,7 +2875,8 @@
       "PKSA-wvmm-4n94-w557",
       "PKSA-zhdh-p298-ky5d",
       "PKSA-h6sr-nh9k-8njy",
-      "PKSA-cf6z-m4kc-pv1v"
+      "PKSA-cf6z-m4kc-pv1v",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.3.3.1": [
       "PKSA-xngt-2zh8-qhq6",
@@ -2905,7 +2941,8 @@
       "PKSA-wvmm-4n94-w557",
       "PKSA-zhdh-p298-ky5d",
       "PKSA-h6sr-nh9k-8njy",
-      "PKSA-cf6z-m4kc-pv1v"
+      "PKSA-cf6z-m4kc-pv1v",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.3.4.0": [
       "PKSA-xngt-2zh8-qhq6",
@@ -2970,7 +3007,8 @@
       "PKSA-wvmm-4n94-w557",
       "PKSA-zhdh-p298-ky5d",
       "PKSA-h6sr-nh9k-8njy",
-      "PKSA-cf6z-m4kc-pv1v"
+      "PKSA-cf6z-m4kc-pv1v",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.3.4.1": [
       "PKSA-xngt-2zh8-qhq6",
@@ -3031,7 +3069,8 @@
       "PKSA-9bqw-n29f-6z7y",
       "PKSA-67qk-k65g-j8tn",
       "PKSA-mqfj-hr7y-3j71",
-      "PKSA-wvmm-4n94-w557"
+      "PKSA-wvmm-4n94-w557",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.3.5.0": [
       "PKSA-xngt-2zh8-qhq6",
@@ -3093,7 +3132,8 @@
       "PKSA-9bqw-n29f-6z7y",
       "PKSA-67qk-k65g-j8tn",
       "PKSA-mqfj-hr7y-3j71",
-      "PKSA-wvmm-4n94-w557"
+      "PKSA-wvmm-4n94-w557",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.3.5.1": [
       "PKSA-xngt-2zh8-qhq6",
@@ -3152,7 +3192,8 @@
       "PKSA-n286-2spw-39pt",
       "PKSA-1twh-tt7h-ds25",
       "PKSA-9bqw-n29f-6z7y",
-      "PKSA-67qk-k65g-j8tn"
+      "PKSA-67qk-k65g-j8tn",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.3.5.2": [
       "PKSA-xngt-2zh8-qhq6",
@@ -3209,7 +3250,8 @@
       "PKSA-bpy7-3v4n-78j8",
       "PKSA-56nh-s9yt-4pw6",
       "PKSA-n286-2spw-39pt",
-      "PKSA-1twh-tt7h-ds25"
+      "PKSA-1twh-tt7h-ds25",
+      "PKSA-62rz-jzfj-ym5j"
     ],
     "v6.3.5.3": [
       "PKSA-xngt-2zh8-qhq6",
